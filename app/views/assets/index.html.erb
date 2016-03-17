@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Assets</h1>
+
+<table class= "table table-striped table-hover", style="width:98%">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @assets.each do |asset| %>
+      <tr>
+        <td><strong><%= asset.try(:title) %></strong></td>
+        <td><%= link_to 'Show', asset, class: "btn btn-raised btn-default" %></td>
+        <td><%= link_to 'Edit', edit_asset_path(asset) , class: "btn btn-raised btn-warning"%></td>
+        <td><%= link_to 'Destroy', asset, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-raised btn-danger",style:"color:white;" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate @assets%>
+<br>
+
+<%= link_to 'New Asset', new_asset_path, class: "btn btn-raised btn-success" %>

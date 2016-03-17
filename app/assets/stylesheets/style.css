@@ -1,0 +1,28 @@
+.footer {
+	margin-left: 40%;
+}
+
+table>thead>tr>th {
+    background: #e6e6e6;
+    font-weight: 600;
+    color: #373737;
+	min-width:100px;
+}
+
+table>tbody>tr>td {
+    font-weight: 300;
+	min-width:100px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+table{
+	width: 98%;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+.container{
+	width: 100%;
+}
+

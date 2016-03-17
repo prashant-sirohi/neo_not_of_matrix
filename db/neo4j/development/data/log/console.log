@@ -1,0 +1,167 @@
+2016-03-14 18:01:26.774+0530 INFO  No SSL certificate found, generating a self-signed certificate..
+2016-03-14 18:01:33.794+0530 INFO  Successfully started database
+2016-03-14 18:01:33.827+0530 INFO  Starting HTTP on port 7000 (4 threads available)
+2016-03-14 18:01:34.353+0530 INFO  Mounting static content at /webadmin
+2016-03-14 18:01:34.420+0530 INFO  Mounting static content at /browser
+2016-03-14 18:01:36.201+0530 INFO  Remote interface ready and available at http://localhost:7000/
+2016-03-15 18:23:42.897+0530 INFO  Neo4j Server shutdown initiated by request
+2016-03-15 18:23:42.923+0530 INFO  Successfully shutdown Neo4j Server
+2016-03-15 18:23:43.399+0530 INFO  Successfully stopped database
+2016-03-15 18:23:43.399+0530 INFO  Successfully shutdown database
+2016-03-15 18:23:45.327+0530 INFO  Successfully shutdown Neo4j Server
+2016-03-15 18:23:45.329+0530 ERROR Failed to start Neo4j: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@2070f7' was successfully initialized, but failed to start. Please see attached cause exception. Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@2070f7' was successfully initialized, but failed to start. Please see attached cause exception.
+org.neo4j.server.ServerStartupException: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@2070f7' was successfully initialized, but failed to start. Please see attached cause exception.
+	at org.neo4j.server.exception.ServerStartupErrors.translateToServerStartupError(ServerStartupErrors.java:67)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:234)
+	at org.neo4j.server.Bootstrapper.start(Bootstrapper.java:97)
+	at org.neo4j.server.CommunityBootstrapper.start(CommunityBootstrapper.java:48)
+	at org.neo4j.server.CommunityBootstrapper.main(CommunityBootstrapper.java:35)
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.server.database.LifecycleManagingDatabase@2070f7' was successfully initialized, but failed to start. Please see attached cause exception.
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:462)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:111)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:194)
+	... 3 more
+Caused by: java.lang.RuntimeException: Error starting org.neo4j.kernel.impl.factory.CommunityFacadeFactory, /home/tft/project/neo_not_of_matrix/db/neo4j/development/data/graph.db
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.newFacade(GraphDatabaseFacadeFactory.java:143)
+	at org.neo4j.kernel.impl.factory.CommunityFacadeFactory.newFacade(CommunityFacadeFactory.java:43)
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.newFacade(GraphDatabaseFacadeFactory.java:108)
+	at org.neo4j.server.CommunityNeoServer$1.newGraphDatabase(CommunityNeoServer.java:66)
+	at org.neo4j.server.database.LifecycleManagingDatabase.start(LifecycleManagingDatabase.java:95)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:452)
+	... 5 more
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.kernel.extension.KernelExtensions@b4372c' failed to initialize. Please see attached cause exception.
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.init(LifeSupport.java:434)
+	at org.neo4j.kernel.lifecycle.LifeSupport.init(LifeSupport.java:66)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:102)
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.newFacade(GraphDatabaseFacadeFactory.java:139)
+	... 10 more
+Caused by: org.neo4j.kernel.impl.util.UnsatisfiedDependencyException: No dependency satisfies type class org.neo4j.kernel.impl.util.StringLogger
+	at org.neo4j.kernel.impl.util.Dependencies.resolveDependency(Dependencies.java:78)
+	at org.neo4j.graphdb.DependencyResolver$Adapter.resolveDependency(DependencyResolver.java:103)
+	at org.neo4j.kernel.impl.util.DependenciesProxy$ProxyHandler.invoke(DependenciesProxy.java:74)
+	at com.sun.proxy.$Proxy6.getStringLogger(Unknown Source)
+	at org.neo4j.elasticsearch.ElasticSearchKernelExtensionFactory.newKernelExtension(ElasticSearchKernelExtensionFactory.java:39)
+	at org.neo4j.elasticsearch.ElasticSearchKernelExtensionFactory.newKernelExtension(ElasticSearchKernelExtensionFactory.java:20)
+	at org.neo4j.kernel.extension.KernelExtensionFactory.newInstance(KernelExtensionFactory.java:69)
+	at org.neo4j.kernel.extension.KernelExtensions.init(KernelExtensions.java:69)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.init(LifeSupport.java:424)
+	... 13 more
+2016-03-16 10:35:28.842+0530 INFO  Successfully shutdown Neo4j Server
+2016-03-16 10:35:28.968+0530 ERROR Failed to start Neo4j: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@2070f7' was successfully initialized, but failed to start. Please see attached cause exception. Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@2070f7' was successfully initialized, but failed to start. Please see attached cause exception.
+org.neo4j.server.ServerStartupException: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@2070f7' was successfully initialized, but failed to start. Please see attached cause exception.
+	at org.neo4j.server.exception.ServerStartupErrors.translateToServerStartupError(ServerStartupErrors.java:67)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:234)
+	at org.neo4j.server.Bootstrapper.start(Bootstrapper.java:97)
+	at org.neo4j.server.CommunityBootstrapper.start(CommunityBootstrapper.java:48)
+	at org.neo4j.server.CommunityBootstrapper.main(CommunityBootstrapper.java:35)
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.server.database.LifecycleManagingDatabase@2070f7' was successfully initialized, but failed to start. Please see attached cause exception.
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:462)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:111)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:194)
+	... 3 more
+Caused by: java.lang.RuntimeException: Error starting org.neo4j.kernel.impl.factory.CommunityFacadeFactory, /home/tft/project/neo_not_of_matrix/db/neo4j/development/data/graph.db
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.newFacade(GraphDatabaseFacadeFactory.java:143)
+	at org.neo4j.kernel.impl.factory.CommunityFacadeFactory.newFacade(CommunityFacadeFactory.java:43)
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.newFacade(GraphDatabaseFacadeFactory.java:108)
+	at org.neo4j.server.CommunityNeoServer$1.newGraphDatabase(CommunityNeoServer.java:66)
+	at org.neo4j.server.database.LifecycleManagingDatabase.start(LifecycleManagingDatabase.java:95)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:452)
+	... 5 more
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.kernel.extension.KernelExtensions@b4372c' failed to initialize. Please see attached cause exception.
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.init(LifeSupport.java:434)
+	at org.neo4j.kernel.lifecycle.LifeSupport.init(LifeSupport.java:66)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:102)
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.newFacade(GraphDatabaseFacadeFactory.java:139)
+	... 10 more
+Caused by: org.neo4j.kernel.impl.util.UnsatisfiedDependencyException: No dependency satisfies type class org.neo4j.kernel.impl.util.StringLogger
+	at org.neo4j.kernel.impl.util.Dependencies.resolveDependency(Dependencies.java:78)
+	at org.neo4j.graphdb.DependencyResolver$Adapter.resolveDependency(DependencyResolver.java:103)
+	at org.neo4j.kernel.impl.util.DependenciesProxy$ProxyHandler.invoke(DependenciesProxy.java:74)
+	at com.sun.proxy.$Proxy6.getStringLogger(Unknown Source)
+	at org.neo4j.elasticsearch.ElasticSearchKernelExtensionFactory.newKernelExtension(ElasticSearchKernelExtensionFactory.java:39)
+	at org.neo4j.elasticsearch.ElasticSearchKernelExtensionFactory.newKernelExtension(ElasticSearchKernelExtensionFactory.java:20)
+	at org.neo4j.kernel.extension.KernelExtensionFactory.newInstance(KernelExtensionFactory.java:69)
+	at org.neo4j.kernel.extension.KernelExtensions.init(KernelExtensions.java:69)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.init(LifeSupport.java:424)
+	... 13 more
+2016-03-16 10:35:51.887+0530 INFO  Successfully shutdown Neo4j Server
+2016-03-16 10:35:51.888+0530 ERROR Failed to start Neo4j: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@2070f7' was successfully initialized, but failed to start. Please see attached cause exception. Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@2070f7' was successfully initialized, but failed to start. Please see attached cause exception.
+org.neo4j.server.ServerStartupException: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@2070f7' was successfully initialized, but failed to start. Please see attached cause exception.
+	at org.neo4j.server.exception.ServerStartupErrors.translateToServerStartupError(ServerStartupErrors.java:67)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:234)
+	at org.neo4j.server.Bootstrapper.start(Bootstrapper.java:97)
+	at org.neo4j.server.CommunityBootstrapper.start(CommunityBootstrapper.java:48)
+	at org.neo4j.server.CommunityBootstrapper.main(CommunityBootstrapper.java:35)
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.server.database.LifecycleManagingDatabase@2070f7' was successfully initialized, but failed to start. Please see attached cause exception.
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:462)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:111)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:194)
+	... 3 more
+Caused by: java.lang.RuntimeException: Error starting org.neo4j.kernel.impl.factory.CommunityFacadeFactory, /home/tft/project/neo_not_of_matrix/db/neo4j/development/data/graph.db
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.newFacade(GraphDatabaseFacadeFactory.java:143)
+	at org.neo4j.kernel.impl.factory.CommunityFacadeFactory.newFacade(CommunityFacadeFactory.java:43)
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.newFacade(GraphDatabaseFacadeFactory.java:108)
+	at org.neo4j.server.CommunityNeoServer$1.newGraphDatabase(CommunityNeoServer.java:66)
+	at org.neo4j.server.database.LifecycleManagingDatabase.start(LifecycleManagingDatabase.java:95)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:452)
+	... 5 more
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.kernel.extension.KernelExtensions@b4372c' failed to initialize. Please see attached cause exception.
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.init(LifeSupport.java:434)
+	at org.neo4j.kernel.lifecycle.LifeSupport.init(LifeSupport.java:66)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:102)
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.newFacade(GraphDatabaseFacadeFactory.java:139)
+	... 10 more
+Caused by: org.neo4j.kernel.impl.util.UnsatisfiedDependencyException: No dependency satisfies type class org.neo4j.kernel.impl.util.StringLogger
+	at org.neo4j.kernel.impl.util.Dependencies.resolveDependency(Dependencies.java:78)
+	at org.neo4j.graphdb.DependencyResolver$Adapter.resolveDependency(DependencyResolver.java:103)
+	at org.neo4j.kernel.impl.util.DependenciesProxy$ProxyHandler.invoke(DependenciesProxy.java:74)
+	at com.sun.proxy.$Proxy6.getStringLogger(Unknown Source)
+	at org.neo4j.elasticsearch.ElasticSearchKernelExtensionFactory.newKernelExtension(ElasticSearchKernelExtensionFactory.java:39)
+	at org.neo4j.elasticsearch.ElasticSearchKernelExtensionFactory.newKernelExtension(ElasticSearchKernelExtensionFactory.java:20)
+	at org.neo4j.kernel.extension.KernelExtensionFactory.newInstance(KernelExtensionFactory.java:69)
+	at org.neo4j.kernel.extension.KernelExtensions.init(KernelExtensions.java:69)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.init(LifeSupport.java:424)
+	... 13 more
+2016-03-16 10:36:10.800+0530 INFO  Successfully shutdown Neo4j Server
+2016-03-16 10:36:10.801+0530 ERROR Failed to start Neo4j: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@2070f7' was successfully initialized, but failed to start. Please see attached cause exception. Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@2070f7' was successfully initialized, but failed to start. Please see attached cause exception.
+org.neo4j.server.ServerStartupException: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@2070f7' was successfully initialized, but failed to start. Please see attached cause exception.
+	at org.neo4j.server.exception.ServerStartupErrors.translateToServerStartupError(ServerStartupErrors.java:67)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:234)
+	at org.neo4j.server.Bootstrapper.start(Bootstrapper.java:97)
+	at org.neo4j.server.CommunityBootstrapper.start(CommunityBootstrapper.java:48)
+	at org.neo4j.server.CommunityBootstrapper.main(CommunityBootstrapper.java:35)
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.server.database.LifecycleManagingDatabase@2070f7' was successfully initialized, but failed to start. Please see attached cause exception.
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:462)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:111)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:194)
+	... 3 more
+Caused by: java.lang.RuntimeException: Error starting org.neo4j.kernel.impl.factory.CommunityFacadeFactory, /home/tft/project/neo_not_of_matrix/db/neo4j/development/data/graph.db
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.newFacade(GraphDatabaseFacadeFactory.java:143)
+	at org.neo4j.kernel.impl.factory.CommunityFacadeFactory.newFacade(CommunityFacadeFactory.java:43)
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.newFacade(GraphDatabaseFacadeFactory.java:108)
+	at org.neo4j.server.CommunityNeoServer$1.newGraphDatabase(CommunityNeoServer.java:66)
+	at org.neo4j.server.database.LifecycleManagingDatabase.start(LifecycleManagingDatabase.java:95)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:452)
+	... 5 more
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.kernel.extension.KernelExtensions@b4372c' failed to initialize. Please see attached cause exception.
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.init(LifeSupport.java:434)
+	at org.neo4j.kernel.lifecycle.LifeSupport.init(LifeSupport.java:66)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:102)
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.newFacade(GraphDatabaseFacadeFactory.java:139)
+	... 10 more
+Caused by: org.neo4j.kernel.impl.util.UnsatisfiedDependencyException: No dependency satisfies type class org.neo4j.kernel.impl.util.StringLogger
+	at org.neo4j.kernel.impl.util.Dependencies.resolveDependency(Dependencies.java:78)
+	at org.neo4j.graphdb.DependencyResolver$Adapter.resolveDependency(DependencyResolver.java:103)
+	at org.neo4j.kernel.impl.util.DependenciesProxy$ProxyHandler.invoke(DependenciesProxy.java:74)
+	at com.sun.proxy.$Proxy6.getStringLogger(Unknown Source)
+	at org.neo4j.elasticsearch.ElasticSearchKernelExtensionFactory.newKernelExtension(ElasticSearchKernelExtensionFactory.java:39)
+	at org.neo4j.elasticsearch.ElasticSearchKernelExtensionFactory.newKernelExtension(ElasticSearchKernelExtensionFactory.java:20)
+	at org.neo4j.kernel.extension.KernelExtensionFactory.newInstance(KernelExtensionFactory.java:69)
+	at org.neo4j.kernel.extension.KernelExtensions.init(KernelExtensions.java:69)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.init(LifeSupport.java:424)
+	... 13 more
+2016-03-16 10:37:47.262+0530 INFO  Successfully started database
+2016-03-16 10:37:47.284+0530 INFO  Starting HTTP on port 7001 (4 threads available)
+2016-03-16 10:37:47.589+0530 INFO  Mounting static content at /webadmin
+2016-03-16 10:37:47.639+0530 INFO  Mounting static content at /browser
+2016-03-16 10:37:48.900+0530 INFO  Remote interface ready and available at http://localhost:7001/
